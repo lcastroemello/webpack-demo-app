@@ -6,3 +6,10 @@ Until here, it was just bundling, but, you can use imports and exports from ES6,
 4) puts imports and exports
 5) move run() and the new instances from app.js to index.js
 6) now you can remove all scripts from html except main.js, because they are all being bundled
+
+CONFIG WEBPACK
+7) We start by setting a webpack.config.js file to start configuring how webpack bundles our stuff. In the future, there will be a different configuration for production and development
+8) After that, the script running webpack on package.json needs to say where to run it, so we replace just webpack by  "start": "webpack --config webpack.config.js"
+
+automatically, webpack will go into production mode, but we can configure it using mode:"development" on config. What it does is to not minify our main.js, allowing us to actually analise the file with our human eyes. Setting devtool:"none", we also exclude the eval() format on the file.
+
